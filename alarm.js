@@ -40,6 +40,11 @@ function setAlarm() {
 
     document.querySelector(".error-msg").innerHTML = `<h3>${msg}</h3>`;
   } else {
+//Get the ringtone
+
+       var sound = new Audio();
+        sound.src = "ringtone1.mp3";
+        sound.loop = true;
     //If Erros msg is present the Hide the Error msg
     document.querySelector(".error-msg").style.display = "none";
     // Disabling Inputs fields and buttons
@@ -103,9 +108,7 @@ function setAlarm() {
 
     if (timeToPlay >= 0 && uAP == ampm) {
       setTimeout(() => {
-        let sound = new Audio();
-        sound.src = "ringtone1.mp3";
-        sound.loop = true;
+        
         sound.play();
 
         // Stop Alarm
