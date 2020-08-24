@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Alarm App- By Anil Sen</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="img/alarm-clock.svg" alt="logo" id="logo-img" />
+      </div>
+    </header>
+    <div class="container">
+      <div class="current-time-box"></div>
+      <div class="set-alarm-box">
+        <h3>Set Alarm</h3>
+        <input
+          type="text"
+          name="hour"
+          minlength="0"
+          maxlength="2"
+          id="hour"
+          placeholder="Hours"
+        />
+        <input
+          type="text"
+          name="minutes"
+          minlength="0"
+          maxlength="2"
+          id="minutes"
+          placeholder="minutes"
+        />
+        <select name="am-pm" id="am-pm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        <button class="set-btn" onclick="setAlarm()">Set Alarm</button>
+      </div>
+      <div class="alarm-display-box">
+        <div class="alarm-box">
+          <div class="error-msg"></div>
+          <h1></h1>
+          <button class="delete-btn" onclick="deleteAlarm()">Delete</button>
+        </div>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="alarm.js"></script>
+  </body>
+</html>
