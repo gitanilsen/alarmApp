@@ -130,7 +130,7 @@ select option:hover {
 
 /* Error msg */
 .error-msg {
-  color: red;
+  color: #fff;
   text-align: center;
 }
 @media (max-width: 768px) {
